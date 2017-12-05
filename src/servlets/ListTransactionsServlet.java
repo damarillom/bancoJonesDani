@@ -1,9 +1,12 @@
 package servlets;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+
 import beans.Account;
 import beans.Cliente;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -30,7 +33,16 @@ public class ListTransactionsServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
+    
+    public List<Transaccion> listaTrans(){
+		List<Transaccion> lTrans = new ArrayList<Transaccion>();
+		for (int i = 0; i<100; i++){
+			Transaccion t = new Transaccion(i,null,0.1,"XXXXXXXXXXXXXXXXXXXXXXXX","XXXXXXXXXXXXXXXXXXXXXXYY");
+			lTrans.add(t);
+		}
+		return lTrans;
+	}
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

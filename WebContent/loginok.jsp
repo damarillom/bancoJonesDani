@@ -35,13 +35,22 @@ if (cookies != null) {
 <body>
 
 
-<form method="POST" action=<%=response.encodeURL("LogoutServlet")%>>
+<%-- <form method="POST" action=<%=response.encodeURL("LogoutServlet")%>>
 		<input type="submit" value="cerrar sesion">
+	</form> --%>
+	<form method="POST" action="<%=response.encodeURL("ControllerServlet")%>">
+		<input type="hidden" name="action" value="logout">
+		<input type="submit" value="Cerrar sesión">
 	</form>
+	
 	<form method="POST" action="<%=response.encodeURL("PerfilServlet")%>">
 		<input type="submit" value="Perfil">
 	</form>
-	<form method="POST" action="<%=response.encodeURL("ListAccountsServlet")%>">
+	<!--<form method="POST" action="<%=response.encodeURL("ListAccountsServlet")%>">
+		<input type="submit" value="Cuentas">
+	</form>-->
+	<form method="POST" action="<%=response.encodeURL("ControllerServlet")%>">
+		<input type="hidden" name="action" value="listAccounts">
 		<input type="submit" value="Cuentas">
 	</form>
 	

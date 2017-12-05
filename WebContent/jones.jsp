@@ -33,7 +33,9 @@ input {
 		</select>
 	</form>
 	<div>
-		<form action="LoginServlet" method="POST">
+		<!-- <form action="LoginServlet" method="POST"> -->
+		<form action="ControllerServlet" method="POST">
+		<input type="hidden" name="action" value="login">
 			DNI: <br><input type="text" name="dni"><br> 
 			<fmt:message key="password"/><br><input type="password" name="pass"><br> 
 			<input type="submit" value="Validar">

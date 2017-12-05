@@ -28,7 +28,9 @@
 		</select>
 	</form>
 	<div>
-		<form action="RegisterServlet" method="POST">
+		<!-- <form action="RegisterServlet" method="POST"> -->
+		<form action="ControllerServlet" method="POST">
+			<input type="hidden" name="action" value="register">
 			<fmt:message key="name"/><br><input type="text" name="nameReg"><br>
 			<fmt:message key="surname"/><br><input type="text" name="surnameReg"><br>
 			DNI: <br><input type="text" name="dniReg"><br>

@@ -39,7 +39,7 @@ public class InsertTransactionServlet extends HttpServlet {
 		String destino = request.getParameter("destino");
 		double importe = Double.parseDouble(request.getParameter("importe"));
 		TransaccionesDAO.realizaTransaccion(origen, destino, importe);
-		response.sendRedirect("listaTransacciones.jsp?account=" + origen);
+		response.sendRedirect("loginok.jsp");
 	}
 
 }
